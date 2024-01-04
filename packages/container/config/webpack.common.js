@@ -1,3 +1,5 @@
+const HtmllWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   module: {
     rules: [
@@ -14,4 +16,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmllWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
 };
