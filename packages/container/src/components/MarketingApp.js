@@ -8,7 +8,7 @@ const MarketingApp = () => {
     mountMarketingApp(htmlElRef.current);
   }, []);
 
-  return <div ref={htmlElRef}></div>;
+  return <div ref={htmlElRef}>Div</div>;
 };
 
 export default MarketingApp;
