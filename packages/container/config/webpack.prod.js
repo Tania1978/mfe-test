@@ -4,6 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 const packageJSON = require("../package.json");
 const domain = process.env.PRODUCTION_DOMAIN;
+console.log(domain);
 const prodConfig = {
   mode: "production", //webpack will minify files and make toher adjustments
   output: {
