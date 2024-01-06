@@ -8,6 +8,7 @@ const prodConfig = {
   mode: "production", //webpack will minify files and make toher adjustments
   output: {
     filename: "[name].[contenthas].js", //naming for caching issues
+    publicPath: "/container/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
