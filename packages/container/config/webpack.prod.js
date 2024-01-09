@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 const packageJSON = require("../package.json");
 const domain = process.env.PRODUCTION_DOMAIN;
-console.log(domain);
+//this domain is set again in github secrets
 const prodConfig = {
   mode: "production", //webpack will minify files and make toher adjustments
   output: {
@@ -15,7 +15,7 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        marketing: `marketing@${domain}/marketing/remoteEntry.js`,
+        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
       },
       shared: packageJSON.dependencies,
     }),
